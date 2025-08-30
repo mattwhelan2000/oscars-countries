@@ -5,52 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="custom.css?v=3">
+    <link rel="stylesheet" href="custom.css?v=4"><!-- bump version -->
   </head>
   <body>
     <header>
       <div class="container">
         <h1>Site Admin</h1>
-        <p class="small">Use this editor to add or update countries. Parents: set up Netlify Identity.</p>
+        <p class="small">Use this editor to add or update countries.</p>
       </div>
     </header>
     <main class="container card">
       <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
       <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-      <!-- Hide Decap UI bits that get in Oscar's way -->
+      <!-- Hide any remaining UI controls if they get re-rendered -->
       <script>
-        function hideAnnoyances() {
-          const selectors = [
-            // "Quick add" pill and its handle
-            'button[title*="Quick add"]',
-            '[aria-label*="Quick add"]',
-            '[data-testid*="quick-add"]',
-            '[class*="QuickAdd"]',
-            '[class*="quickAdd"]',
-            // User avatar / logout menu (top-right)
-            '[aria-label="Open user menu"]',
-            '[data-testid*="user-menu"]',
-            '[class*="UserMenu"]',
-            '[class*="AvatarButton"]'
+        function hideBits() {
+          const sels = [
+            'button[title*="Quick add"]','[aria-label*="Quick add"]','[data-testid*="quick-add"]','[class*="QuickAdd"]','[class*="quickAdd"]',
+            '[aria-label="Open user menu"]','[data-testid*="user-menu"]','[class*="UserMenu"]','[class*="AvatarButton"]',
+            'button[title*="Toggle"]','button[aria-label*="Toggle"]','[aria-label*="toggle"]','[data-testid*="toggle"]',
+            '[class*="PaneToggle"]','[class*="EditorToolbar"]','[class*="EditorControlBar"]','[class*="PaneControl"]',
+            '[class*="PaneResizer"]','[class*="SplitPane"]','[class*="DragHandle"]',
+            '[class*="EditorPreviewPane"]','[class*="PreviewPane"]','[role="region"][aria-label*="Preview"]'
           ];
-          selectors.forEach(s => {
-            document.querySelectorAll(s).forEach(el => {
-              el.style.display = 'none';
-            });
-          });
-
-          // OPTIONAL: hide the preview pane entirely (uncomment if you want form-only)
-          // document.querySelectorAll('[class*="EditorPreviewPane"],[class*="PreviewPane"]').forEach(el => {
-          //   el.style.display = 'none';
-          // });
+          sels.forEach(s => document.querySelectorAll(s).forEach(el => el.style.display = 'none'));
         }
-
-        // Run now, and again whenever the UI updates
-        hideAnnoyances();
-        const mo = new MutationObserver(hideAnnoyances);
-        mo.observe(document.documentElement, { childList: true, subtree: true });
-        window.addEventListener('load', hideAnnoyances);
+        hideBits();
+        new MutationObserver(hideBits).observe(document.documentElement, { childList: true, subtree: true });
+        window.addEventListener('load', hideBits);
       </script>
     </main>
   </body>

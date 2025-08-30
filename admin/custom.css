@@ -1,61 +1,63 @@
-/* =========================
-   Kid-mode Admin polish
-   ========================= */
+/* ============================================================
+   Admin UI — Dock the floating CMS toolbar under the header
+   ============================================================ */
 
-/* 1) Dock the editor toolbar (Contents / Workflow / Media …) at the top */
+/* 1) Dock the CMS toolbar (the bar with "Contents / Media / …") */
 [role="toolbar"],
-[class*="Toolbar"],
+/* extra insurance if Decap changes attributes/classes */
+[class*="Toolbar"][class*="Top"],
 [class*="EditorToolbar"],
-[class*="ControlBar"],
-[class*="PaneControl"] {
-  position: sticky !important;
-  top: 0 !important;          /* directly under the site header */
+[class*="GlobalToolbar"] {
+  position: sticky !important;   /* stays visible while scrolling */
+  top: 64px !important;          /* sits just below your site header */
   left: 0 !important;
   right: 0 !important;
-  transform: none !important;
+  transform: none !important;    /* cancel any floating translate() */
   margin: 0 !important;
   width: 100% !important;
-  z-index: 1000 !important;
-  background: #0b0e14 !important;      /* match site dark */
+  z-index: 1000 !important;      /* above content, below any modals */
+  background: #0b0e14 !important; /* match your dark theme */
   border-bottom: 1px solid #1f232b !important;
 }
 
-/* 2) Leave room so the form isn’t hidden beneath toolbar */
+/* 2) Give the editor area space so content isn't hidden under the toolbar */
 [class*="AppMain"],
-[class*="Editor"],
+[class*="EntryEditor"],
 [class*="EditorContainer"],
-[class*="EntryEditor"] {
-  padding-top: 56px !important; /* room for docked toolbar */
+[class*="Editor"],
+[class*="CollectionPage"] {
+  /* This should be slightly larger than the toolbar's "top" value above */
+  padding-top: 76px !important;
 }
 
-/* 3) Form full width (assumes preview is disabled via editor.preview: false) */
+/* 3) Make sure inner panes respect the spacing and don't add their own overlap */
 [class*="PaneContainer"],
 [class*="ContentPane"],
-[class*="Editor"] [class*="EditorContainer"] {
-  width: 100% !important;
-  max-width: 100% !important;
+[class*="EditorMain"],
+[class*="EditorWrap"] {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
-/* 4) Hide the plain "Save" button so kids just press Publish */
-button[aria-label="Save"],
-button[title="Save"] {
-  display: none !important;
+/* 4) Keep forms readable and touch-friendly (iPad) */
+input, select, textarea, button {
+  font-size: 16px !important;    /* prevent iOS auto-zoom on focus */
 }
 
-/* 5) Optional tidying: hide Quick add & user/avatar menu (top-right) */
-button[title*="Quick add"],
-[aria-label*="Quick add"],
-[data-testid*="quick-add"],
-[class*="QuickAdd"],
-[class*="quickAdd"],
-[aria-label="Open user menu"],
-[data-testid*="user-menu"],
-[class*="UserMenu"],
-[class*="AvatarButton"] {
-  display: none !important;
+/* 5) Optional polish: keep cards/sections from touching edges on small screens */
+[class*="card"], [class*="Card"] {
+  border-radius: 12px;
 }
 
-/* 6) Inputs a bit larger for tiny fingers */
-input, textarea, select, button {
-  font-size: 16px !important;   /* prevents iOS zoom */
+/* 6) Optional: darken the toolbar icons a bit for contrast on dark bg */
+[role="toolbar"] * {
+  color: #e5e7eb !important;
 }
+
+/* === Notes ===
+   - If your header is taller/shorter, adjust:
+       - toolbar "top"  (currently 64px)
+       - editor padding (currently 76px)
+   - We purposely do NOT hide Quick add / Logout / Preview controls here.
+     This stylesheet **only docks** the toolbar and prevents overlap.
+*/

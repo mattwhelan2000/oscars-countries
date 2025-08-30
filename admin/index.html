@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="custom.css?v=2"><!-- cache-bust -->
+    <link rel="stylesheet" href="custom.css?v=3">
   </head>
   <body>
     <header>
@@ -17,6 +17,41 @@
     <main class="container card">
       <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
       <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+      <!-- Hide Decap UI bits that get in Oscar's way -->
+      <script>
+        function hideAnnoyances() {
+          const selectors = [
+            // "Quick add" pill and its handle
+            'button[title*="Quick add"]',
+            '[aria-label*="Quick add"]',
+            '[data-testid*="quick-add"]',
+            '[class*="QuickAdd"]',
+            '[class*="quickAdd"]',
+            // User avatar / logout menu (top-right)
+            '[aria-label="Open user menu"]',
+            '[data-testid*="user-menu"]',
+            '[class*="UserMenu"]',
+            '[class*="AvatarButton"]'
+          ];
+          selectors.forEach(s => {
+            document.querySelectorAll(s).forEach(el => {
+              el.style.display = 'none';
+            });
+          });
+
+          // OPTIONAL: hide the preview pane entirely (uncomment if you want form-only)
+          // document.querySelectorAll('[class*="EditorPreviewPane"],[class*="PreviewPane"]').forEach(el => {
+          //   el.style.display = 'none';
+          // });
+        }
+
+        // Run now, and again whenever the UI updates
+        hideAnnoyances();
+        const mo = new MutationObserver(hideAnnoyances);
+        mo.observe(document.documentElement, { childList: true, subtree: true });
+        window.addEventListener('load', hideAnnoyances);
+      </script>
     </main>
   </body>
 </html>

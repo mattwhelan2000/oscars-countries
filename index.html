@@ -20,5 +20,12 @@
     </main>
     <div class="footer small">Static template • Host on Netlify / Vercel / GitHub Pages • Edit <code>countries.json</code> to update.</div>
     <script src="./assets/app.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // If invite or recovery link lands on the homepage, send it to /admin/
+  if (/#(invite_token|recovery_token)=/.test(location.hash)) {
+    location.replace('/admin/' + location.hash);
+  }
+</script>
   </body>
 </html>

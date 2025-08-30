@@ -1,63 +1,71 @@
 /* ============================================================
-   Admin UI — Dock the floating CMS toolbar under the header
+   Admin UI — Dock the CMS toolbar under your page header
+   Works across Decap versions by targeting multiple containers.
    ============================================================ */
 
-/* 1) Dock the CMS toolbar (the bar with "Contents / Media / …") */
+/* -------- 1) FORCE the CMS header/toolbar to be docked -------- */
+/* Try common header/toolbar shells Decap uses */
 [role="toolbar"],
-/* extra insurance if Decap changes attributes/classes */
-[class*="Toolbar"][class*="Top"],
+[aria-label="Main"],
+[data-testid*="app-header"],
+[data-testid*="top-bar"],
+[class*="GlobalToolbar"],
+[class*="GlobalHeader"],
+[class*="TopBar"],
+[class*="NavBar"],
 [class*="EditorToolbar"],
-[class*="GlobalToolbar"] {
-  position: sticky !important;   /* stays visible while scrolling */
-  top: 64px !important;          /* sits just below your site header */
+[class*="ControlBar"] {
+  position: sticky !important;   /* stick while scrolling */
+  top: 64px !important;          /* sits just below YOUR header */
   left: 0 !important;
   right: 0 !important;
-  transform: none !important;    /* cancel any floating translate() */
+  transform: none !important;    /* cancel translate/float */
   margin: 0 !important;
   width: 100% !important;
-  z-index: 1000 !important;      /* above content, below any modals */
-  background: #0b0e14 !important; /* match your dark theme */
+  z-index: 1000 !important;      /* above content, below modals */
+  background: #0b0e14 !important;  /* match your dark theme */
   border-bottom: 1px solid #1f232b !important;
 }
 
-/* 2) Give the editor area space so content isn't hidden under the toolbar */
+/* Some builds nest the controls; keep those docked too */
+[role="toolbar"] *,
+[class*="GlobalToolbar"] *,
+[class*="EditorToolbar"] * {
+  transform: none !important;
+}
+
+/* -------- 2) Give the editor area space so nothing sits under the bar -------- */
 [class*="AppMain"],
 [class*="EntryEditor"],
 [class*="EditorContainer"],
-[class*="Editor"],
-[class*="CollectionPage"] {
-  /* This should be slightly larger than the toolbar's "top" value above */
-  padding-top: 76px !important;
+[class*="EditorMain"],
+[class*="CollectionPage"],
+[class*="Editor"] {
+  padding-top: 84px !important;   /* slightly larger than top(64px) */
 }
 
-/* 3) Make sure inner panes respect the spacing and don't add their own overlap */
+/* -------- 3) Make the form use full width (assuming preview disabled) -------- */
 [class*="PaneContainer"],
 [class*="ContentPane"],
-[class*="EditorMain"],
 [class*="EditorWrap"] {
+  width: 100% !important;
+  max-width: 100% !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* 4) Keep forms readable and touch-friendly (iPad) */
+/* -------- 4) Touch-friendly inputs (iPad) -------- */
 input, select, textarea, button {
-  font-size: 16px !important;    /* prevent iOS auto-zoom on focus */
+  font-size: 16px !important;     /* avoid iOS zoom on focus */
 }
 
-/* 5) Optional polish: keep cards/sections from touching edges on small screens */
-[class*="card"], [class*="Card"] {
-  border-radius: 12px;
+/* ====================== Fallback (last resort) ======================
+   If for some reason the toolbar still floats/overlaps, uncomment the
+   block below to simply push the whole editor down enough so nothing
+   can overlap. This keeps everything visible for Oscar.
+*/
+/*
+body, [class*="container"], [class*="card"], [class*="AppMain"] {
+  padding-top: 140px !important;   // big, brute-force spacing
 }
-
-/* 6) Optional: darken the toolbar icons a bit for contrast on dark bg */
-[role="toolbar"] * {
-  color: #e5e7eb !important;
-}
-
-/* === Notes ===
-   - If your header is taller/shorter, adjust:
-       - toolbar "top"  (currently 64px)
-       - editor padding (currently 76px)
-   - We purposely do NOT hide Quick add / Logout / Preview controls here.
-     This stylesheet **only docks** the toolbar and prevents overlap.
 */

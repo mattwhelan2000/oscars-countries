@@ -1,45 +1,33 @@
-/* ============================================================
-   Admin UI — Dock the editor toolbar & make it visible
-   ============================================================ */
-
-/* 1) Target the sub-toolbar (Contents / Media / Quick add / user) */
-[role="toolbar"] {
-  position: sticky !important;
-  top: 64px !important;         /* under your header */
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  transform: none !important;
-  margin: 0 !important;
-  z-index: 2000 !important;
-  background: #d3d3d3 !important;  /* light grey background */
-  border-bottom: 2px solid #666 !important;
-  min-height: 44px;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 12px;
-  padding: 4px 12px;
+/* Dock strip styling */
+#cms-toolbar-dock {
+  position: sticky;        /* stays visible while scrolling */
+  top: 0;                  /* sits directly under your header */
+  z-index: 2000;
+  background: #e5e7eb;     /* light gray so the bar is visible */
+  border-bottom: 1px solid #c5cbd3;
 }
 
-/* 2) Make sure editor content is pushed below it */
+/* Make the Decap toolbar fill the dock cleanly */
+#cms-toolbar-dock [role="toolbar"],
+#cms-toolbar-dock [class*="GlobalToolbar"],
+#cms-toolbar-dock [class*="TopBar"],
+#cms-toolbar-dock [class*="EditorToolbar"] {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 8px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* Give the editor content breathing room (because we added a dock above it) */
 [class*="AppMain"],
 [class*="EditorContainer"],
 [class*="EntryEditor"],
-[class*="EditorMain"] {
-  padding-top: 110px !important;
+[class*="EditorMain"],
+[class*="CollectionPage"] {
+  scroll-margin-top: 72px;  /* nicer anchor scrolling */
 }
 
-/* 3) Ensure toolbar spans both columns (form + preview) */
-[class*="SplitPane"],
-[class*="PaneContainer"] {
-  flex-direction: column !important;
-}
-[class*="SplitPane"] > [role="toolbar"] {
-  order: -1; /* force it above form + preview */
-}
-
-/* 4) Touch-friendly inputs (iPad) */
-input, select, textarea, button {
-  font-size: 16px !important;
-}
+/* Touch-friendly inputs (iPad) */
+input, select, textarea, button { font-size: 16px !important; }

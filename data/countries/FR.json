@@ -1,23 +1,23 @@
 {
-  "code": "FR",
+  "highest_point_m": 4808,
+  "facts": "Home to the Eiffel Tower; global leader in wine and cuisine.",
   "name": "France",
   "flag": "https://flagcdn.com/w320/fr.png",
-  "video_embed": "https://www.youtube.com/embed/0fZCCAqoSwY",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "FR",
   "population": 68000000,
-  "area_km2": 551695,
-  "highest_point_m": 4808,
+  "stamps": [
+    "La Marianne series"
+  ],
   "currency": "Euro (EUR)",
+  "history": "French Revolution (1789); influential in European history.",
+  "video_embed": "https://www.youtube.com/embed/0fZCCAqoSwY",
+  "location": "Western Europe; borders Belgium, Germany, Italy, Spain, and more",
   "animals": [
     "Gallic rooster",
     "European bison (reintroduced)"
   ],
-  "stamps": [
-    "La Marianne series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "Western Europe; borders Belgium, Germany, Italy, Spain, and more",
-  "facts": "Home to the Eiffel Tower; global leader in wine and cuisine.",
-  "history": "French Revolution (1789); influential in European history."
+  "area_km2": 551695
 }

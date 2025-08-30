@@ -1,4 +1,5 @@
-/* Hide the "Quick add" floating toolbar */
-[class*="QuickAddButton"] {
+/* Hide the floating "Quick add" toolbar in Decap CMS */
+[class*="QuickAddButton"],
+[class*="QuickAdd"] {
   display: none !important;
 }

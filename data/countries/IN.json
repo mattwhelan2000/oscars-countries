@@ -1,23 +1,23 @@
 {
-  "code": "IN",
+  "highest_point_m": 8586,
+  "facts": "One of the world’s oldest civilizations; diverse languages and cuisines.",
   "name": "India",
   "flag": "https://flagcdn.com/w320/in.png",
-  "video_embed": "https://www.youtube.com/embed/9No-FiEInLA",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "IN",
   "population": 1420000000,
-  "area_km2": 3287263,
-  "highest_point_m": 8586,
+  "stamps": [
+    "India Post definitive series"
+  ],
   "currency": "Indian rupee (INR)",
+  "history": "Independence in 1947; rapid modern growth.",
+  "video_embed": "https://www.youtube.com/embed/9No-FiEInLA",
+  "location": "South Asia; borders Pakistan, China, Nepal, Bangladesh, Myanmar",
   "animals": [
     "Bengal tiger",
     "Indian elephant"
   ],
-  "stamps": [
-    "India Post definitive series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "South Asia; borders Pakistan, China, Nepal, Bangladesh, Myanmar",
-  "facts": "One of the world\u2019s oldest civilizations; diverse languages and cuisines.",
-  "history": "Independence in 1947; rapid modern growth."
+  "area_km2": 3287263
 }

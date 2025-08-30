@@ -1,24 +1,24 @@
 {
-  "code": "BR",
+  "highest_point_m": 2995,
+  "facts": "World’s largest rainforest; football (soccer) powerhouse.",
   "name": "Brazil",
   "flag": "https://flagcdn.com/w320/br.png",
-  "video_embed": "",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "BR",
   "population": 203000000,
-  "area_km2": 8515767,
-  "highest_point_m": 2995,
+  "stamps": [
+    "Brazil Empire classics"
+  ],
   "currency": "Brazilian real (BRL)",
+  "history": "Portuguese colony to republic; diverse culture.",
+  "video_embed": "",
+  "location": "South America; Amazon Basin dominates the north",
   "animals": [
     "Jaguar",
     "Macaw",
     "Capybara"
   ],
-  "stamps": [
-    "Brazil Empire classics"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "South America; Amazon Basin dominates the north",
-  "facts": "World\u2019s largest rainforest; football (soccer) powerhouse.",
-  "history": "Portuguese colony to republic; diverse culture."
+  "area_km2": 8515767
 }

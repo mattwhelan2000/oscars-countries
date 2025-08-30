@@ -1,23 +1,23 @@
 {
-  "code": "EG",
+  "highest_point_m": 2629,
+  "facts": "Pyramids and Nile civilization; strategic Suez Canal.",
   "name": "Egypt",
   "flag": "https://flagcdn.com/w320/eg.png",
-  "video_embed": "",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "EG",
   "population": 111000000,
-  "area_km2": 1002450,
-  "highest_point_m": 2629,
+  "stamps": [
+    "Pharaonic series"
+  ],
   "currency": "Egyptian pound (EGP)",
+  "history": "Ancient kingdoms; modern republic since 1953.",
+  "video_embed": "",
+  "location": "Northeast Africa; Sinai connects to Asia",
   "animals": [
     "Dromedary",
     "Nile crocodile"
   ],
-  "stamps": [
-    "Pharaonic series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "Northeast Africa; Sinai connects to Asia",
-  "facts": "Pyramids and Nile civilization; strategic Suez Canal.",
-  "history": "Ancient kingdoms; modern republic since 1953."
+  "area_km2": 1002450
 }

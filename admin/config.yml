@@ -1,4 +1,3 @@
-
 backend:
   name: git-gateway
   branch: main
@@ -21,8 +20,8 @@ collections:
     fields:
       - {label: "Code (ISO, e.g. CA)", name: "code", widget: "string"}
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Flag URL", name: "flag", widget: "string", hint: "Use https://flagcdn.com/w320/xx.png or upload to /uploads and paste its path."}
-      - {label: "Video Embed URL or File URL", name: "video_embed", widget: "string", required: false, hint: "Use YouTube/Vimeo /embed/ URL, or /uploads/your-video.mp4"}
+      - {label: "Flag URL", name: "flag", widget: "string", hint: "Use https://flagcdn.com/w320/xx.png or upload to /uploads and paste path"}
+      - {label: "Video URL or Embed", name: "video_embed", widget: "string", required: false}
       - label: "Images"
         name: "images"
         widget: "list"
@@ -42,18 +41,3 @@ collections:
       - {label: "Geographic Location", name: "location", widget: "text", required: false}
       - {label: "Facts", name: "facts", widget: "text", required: false}
       - {label: "History", name: "history", widget: "text", required: false}
-
-  - name: "manifest"
-    label: "Chart Max Values"
-    files:
-      - name: "max"
-        label: "Maxima"
-        file: "data/manifest.json"
-        fields:
-          - label: "Max"
-            name: "max"
-            widget: "object"
-            fields:
-              - {label: "Population Max", name: "population", widget: "number"}
-              - {label: "Area (km²) Max", name: "area_km2", widget: "number"}
-              - {label: "Highest Point (m) Max", name: "highest_point_m", widget: "number"}

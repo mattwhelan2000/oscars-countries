@@ -1,6 +1,6 @@
 /* ===== Hide the thin floating divider/toolbar + "Quick add" bubble ===== */
 
-/* The “quick add” bubble */
+/* The “quick add” bubble - This will stay hidden, as requested */
 button[title*="Quick add"],
 [aria-label*="Quick add"],
 [data-testid*="quick-add"],
@@ -10,16 +10,36 @@ button[title*="Quick add"],
 }
 
 /* The thin strip with the round handle (covers most Decap builds) */
+/* --- MODIFIED: I removed PaneControlBar and PaneControl from this list so they won't be hidden --- */
 [role="separator"],
 div[class*="Resizer"],
 div[class*="PaneResizer"],
 div[class*="SplitPane__Resizer"],
 div[class*="Editor__Divider"],
-div[class*="DragHandle"],
-div[class*="PaneControlBar"],
-div[class*="PaneControl"] {
+div[class*="DragHandle"] {
   display: none !important;
 }
+
+/* ===== NEW RULE: Dock the Control Bar (the one you were hiding) ===== */
+
+/* 
+  This new rule targets the bar that holds "Contents", "Media", etc.
+  Instead of hiding it, we are making it visible and forcing it to be
+  'static' (in the page flow) instead of 'absolute' (floating).
+*/
+div[class*="PaneControlBar"],
+div[class*="PaneControl"] {
+  display: flex !important;            /* Make it visible and layout items in a row */
+  position: static !important;        /* This is the key: Stops it from floating */
+  width: 100% !important;             /* Make it span the full width of its container */
+  box-shadow: none !important;        /* Remove floating shadows */
+  border-bottom: 2px solid #eaebed;  /* Add a clean divider line */
+  margin-bottom: 15px !important;    /* Add some space below the docked bar */
+  padding: 5px 10px !important;      /* Add some internal spacing */
+  background: #fff !important;        /* Ensure it has a solid background */
+  box-sizing: border-box !important;
+}
+
 
 /* Keep editor layout tight after removing the strip */
 [class*="PaneContainer"],
@@ -33,30 +53,3 @@ div[class*="PaneControl"] {
 
 /* Touch-friendly inputs (iPad) */
 input, select, textarea, button { font-size: 16px !important; }
-
-/* ===== Custom rules to dock the Decap CMS toolbar to the top ===== */
-
-/* Dock the main Decap CMS toolbar to the top */
-div[class*="AppHeader"] {
-  position: fixed !important;
-  top: 0 !important;
-  width: 100% !important;
-  z-index: 1000 !important; /* Ensure it stays above other content */
-  box-sizing: border-box !important; /* Include padding and border in the element's total width and height */
-  /* You might want to add a background color if the default is transparent */
-  /* background-color: #f0f0f0 !important; */
-}
-
-/* Adjust the main content area to prevent it from being hidden behind the fixed toolbar */
-/* Adjust '60px' if the toolbar's height is different after docking */
-main.container.card {
-  margin-top: 60px !important;
-}
-
-/* Potentially override any conflicting 'display: none' rules if the toolbar is hidden */
-/* (This ensures elements like "Contents", "Media", "User Icon" are visible if they were hidden by your previous rules) */
-div[class*="PaneControlBar"],
-div[class*="PaneControl"] {
-  display: flex !important; /* Use flex or block depending on their original layout */
-  /* You might need to refine these specific selectors if your toolbar components still don't show */
-}

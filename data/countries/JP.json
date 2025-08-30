@@ -1,23 +1,23 @@
 {
-  "code": "JP",
+  "highest_point_m": 3776,
+  "facts": "Blend of tradition and tech; bullet trains, sushi, anime.",
   "name": "Japan",
   "flag": "https://flagcdn.com/w320/jp.png",
-  "video_embed": "https://www.youtube.com/embed/MHhIu7T6Q8Q",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "JP",
   "population": 123000000,
-  "area_km2": 377975,
-  "highest_point_m": 3776,
+  "stamps": [
+    "Cherry blossom series"
+  ],
   "currency": "Japanese yen (JPY)",
+  "history": "Shogunate era to modern economic boom; WWII and recovery.",
+  "video_embed": "https://www.youtube.com/embed/MHhIu7T6Q8Q",
+  "location": "East Asia; island nation in the Pacific",
   "animals": [
     "Japanese macaque",
     "Red-crowned crane"
   ],
-  "stamps": [
-    "Cherry blossom series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "East Asia; island nation in the Pacific",
-  "facts": "Blend of tradition and tech; bullet trains, sushi, anime.",
-  "history": "Shogunate era to modern economic boom; WWII and recovery."
+  "area_km2": 377975
 }

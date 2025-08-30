@@ -8,7 +8,7 @@
   "stamps": [
     "Forever stamps"
   ],
-  "currency": "US dollar (USD) uploads/image.jpg",
+  "currency": "US dollar (USD)",
   "history": "Independence declared in 1776.",
   "video_embed": "",
   "location": "North America; between Canada and Mexico",
@@ -17,7 +17,7 @@
     "American bison"
   ],
   "images": [
-    "./images/placeholder.png",
+    "uploads/image.jpg",
     "./images/placeholder.png"
   ],
   "area_km2": 9833517

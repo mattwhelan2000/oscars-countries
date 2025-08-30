@@ -1,23 +1,23 @@
 {
-  "code": "MX",
+  "highest_point_m": 5636,
+  "facts": "Rich Mesoamerican history; global cuisine influence.",
   "name": "Mexico",
   "flag": "https://flagcdn.com/w320/mx.png",
-  "video_embed": "",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "MX",
   "population": 129000000,
-  "area_km2": 1964375,
-  "highest_point_m": 5636,
+  "stamps": [
+    "Exporta series"
+  ],
   "currency": "Mexican peso (MXN)",
+  "history": "Aztec empire; independence in 1810; modern federal republic.",
+  "video_embed": "",
+  "location": "North America; between USA and Central America",
   "animals": [
     "Axolotl",
     "Jaguar"
   ],
-  "stamps": [
-    "Exporta series"
+  "images": [
+    "img_0569.jpeg"
   ],
-  "location": "North America; between USA and Central America",
-  "facts": "Rich Mesoamerican history; global cuisine influence.",
-  "history": "Aztec empire; independence in 1810; modern federal republic."
+  "area_km2": 1964375
 }

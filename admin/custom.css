@@ -1,33 +1,45 @@
-/* Dock strip styling */
-#cms-toolbar-dock {
-  position: sticky;        /* stays visible while scrolling */
-  top: 0;                  /* sits directly under your header */
+/* Hide Decap's floating/global toolbar completely */
+[role="toolbar"],
+header[aria-label],
+[data-testid*="app-header"],
+[data-testid*="top-bar"],
+[class*="GlobalToolbar"],
+[class*="TopBar"],
+[class*="EditorToolbar"],
+[class*="ControlBar"] {
+  display: none !important;
+}
+
+/* Our simple, docked toolbar */
+#kid-toolbar {
+  position: sticky;
+  top: 0;
   z-index: 2000;
-  background: #e5e7eb;     /* light gray so the bar is visible */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #e5e7eb;          /* light gray so it’s clearly visible */
   border-bottom: 1px solid #c5cbd3;
 }
 
-/* Make the Decap toolbar fill the dock cleanly */
-#cms-toolbar-dock [role="toolbar"],
-#cms-toolbar-dock [class*="GlobalToolbar"],
-#cms-toolbar-dock [class*="TopBar"],
-#cms-toolbar-dock [class*="EditorToolbar"] {
-  background: transparent !important;
-  border: 0 !important;
-  padding: 8px 12px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
+/* Push content below our toolbar a bit */
+.container.card {
+  margin-top: 8px;
 }
 
-/* Give the editor content breathing room (because we added a dock above it) */
-[class*="AppMain"],
-[class*="EditorContainer"],
-[class*="EntryEditor"],
-[class*="EditorMain"],
-[class*="CollectionPage"] {
-  scroll-margin-top: 72px;  /* nicer anchor scrolling */
+/* Toolbar buttons */
+#kid-toolbar button {
+  appearance: none;
+  border: 1px solid #c5cbd3;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
 }
+#kid-toolbar button:hover { background: #f5f6f7; }
+#kid-toolbar .spacer { flex: 1 1 auto; }
 
 /* Touch-friendly inputs (iPad) */
 input, select, textarea, button { font-size: 16px !important; }

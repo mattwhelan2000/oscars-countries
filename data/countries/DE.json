@@ -1,23 +1,23 @@
 {
-  "code": "DE",
+  "highest_point_m": 2962,
+  "facts": "Engineering powerhouse; famous for autobahns and Oktoberfest.",
   "name": "Germany",
   "flag": "https://flagcdn.com/w320/de.png",
-  "video_embed": "",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "DE",
   "population": 84000000,
-  "area_km2": 357022,
-  "highest_point_m": 2962,
+  "stamps": [
+    "Deutsche Post definitive series"
+  ],
   "currency": "Euro (EUR)",
+  "history": "Reunification in 1990; key EU member.",
+  "video_embed": "",
+  "location": "Central Europe; borders nine countries",
   "animals": [
     "Red deer",
     "Wild boar"
   ],
-  "stamps": [
-    "Deutsche Post definitive series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "Central Europe; borders nine countries",
-  "facts": "Engineering powerhouse; famous for autobahns and Oktoberfest.",
-  "history": "Reunification in 1990; key EU member."
+  "area_km2": 357022
 }

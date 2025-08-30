@@ -1,23 +1,23 @@
 {
-  "code": "CN",
+  "highest_point_m": 8848,
+  "facts": "Great Wall of China, fastest-growing economy.",
   "name": "China",
   "flag": "https://flagcdn.com/w320/cn.png",
-  "video_embed": "https://www.youtube.com/embed/2EioWQ2m7aM",
-  "images": [
-    "https://upload.wikimedia.org/wikipedia/commons/6/6f/GreatWall_2004_Summer_4.JPG"
-  ],
+  "code": "CN",
   "population": 1412000000,
-  "area_km2": 9596961,
-  "highest_point_m": 8848,
+  "stamps": [
+    "Year of the Dragon"
+  ],
   "currency": "Renminbi (CNY)",
+  "history": "Ancient dynasties; Communist revolution 1949.",
+  "video_embed": "https://www.youtube.com/embed/2EioWQ2m7aM",
+  "location": "East Asia",
   "animals": [
     "Giant panda",
     "Red-crowned crane"
   ],
-  "stamps": [
-    "Year of the Dragon"
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/6/6f/GreatWall_2004_Summer_4.JPG"
   ],
-  "location": "East Asia",
-  "facts": "Great Wall of China, fastest-growing economy.",
-  "history": "Ancient dynasties; Communist revolution 1949."
+  "area_km2": 9596961
 }

@@ -1,71 +1,37 @@
 /* ============================================================
-   Admin UI — Dock the CMS toolbar under your page header
-   Works across Decap versions by targeting multiple containers.
+   Minimal fix: Pin the CMS toolbar and prevent overlap
    ============================================================ */
 
-/* -------- 1) FORCE the CMS header/toolbar to be docked -------- */
-/* Try common header/toolbar shells Decap uses */
-[role="toolbar"],
-[aria-label="Main"],
-[data-testid*="app-header"],
-[data-testid*="top-bar"],
-[class*="GlobalToolbar"],
-[class*="GlobalHeader"],
-[class*="TopBar"],
-[class*="NavBar"],
-[class*="EditorToolbar"],
-[class*="ControlBar"] {
-  position: sticky !important;   /* stick while scrolling */
-  top: 64px !important;          /* sits just below YOUR header */
+/* 1) Pin the toolbar (the bar with "Contents / Media / Quick add / Logout") */
+[role="toolbar"] {
+  position: fixed !important;   /* take it out of the flow and stick it */
+  top: 64px !important;          /* sits just below your Admin header */
   left: 0 !important;
   right: 0 !important;
-  transform: none !important;    /* cancel translate/float */
+  transform: none !important;    /* cancel any floating translate() */
   margin: 0 !important;
   width: 100% !important;
-  z-index: 1000 !important;      /* above content, below modals */
-  background: #0b0e14 !important;  /* match your dark theme */
+  z-index: 1000 !important;      /* above content */
+  background: #0b0e14 !important;
   border-bottom: 1px solid #1f232b !important;
 }
 
-/* Some builds nest the controls; keep those docked too */
-[role="toolbar"] *,
-[class*="GlobalToolbar"] *,
-[class*="EditorToolbar"] * {
-  transform: none !important;
+/* 2) Give the whole page enough space so the toolbar never covers fields */
+html, body {
+  /* header (~64px) + toolbar (~48px) + a little breathing room */
+  padding-top: 120px !important;
 }
 
-/* -------- 2) Give the editor area space so nothing sits under the bar -------- */
+/* 3) Make sure inner editor areas don’t add their own top margins */
 [class*="AppMain"],
-[class*="EntryEditor"],
 [class*="EditorContainer"],
+[class*="EntryEditor"],
 [class*="EditorMain"],
-[class*="CollectionPage"],
-[class*="Editor"] {
-  padding-top: 84px !important;   /* slightly larger than top(64px) */
-}
-
-/* -------- 3) Make the form use full width (assuming preview disabled) -------- */
-[class*="PaneContainer"],
 [class*="ContentPane"],
-[class*="EditorWrap"] {
-  width: 100% !important;
-  max-width: 100% !important;
+[class*="PaneContainer"] {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* -------- 4) Touch-friendly inputs (iPad) -------- */
-input, select, textarea, button {
-  font-size: 16px !important;     /* avoid iOS zoom on focus */
-}
-
-/* ====================== Fallback (last resort) ======================
-   If for some reason the toolbar still floats/overlaps, uncomment the
-   block below to simply push the whole editor down enough so nothing
-   can overlap. This keeps everything visible for Oscar.
-*/
-
-body, [class*="container"], [class*="card"], [class*="AppMain"] {
-  padding-top: 140px !important;   // big, brute-force spacing
-}
-
+/* Touch-friendly inputs (iPad) */
+input, select, textarea, button { font-size: 16px !important; }

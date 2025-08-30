@@ -1,40 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="custom.css?v=4"><!-- bump version -->
   </head>
   <body>
     <header>
       <div class="container">
         <h1>Site Admin</h1>
-        <p class="small">Use this editor to add or update countries.</p>
+        <p class="small">Use this editor to add or update countries. Parents: set up Netlify Identity.</p>
       </div>
     </header>
     <main class="container card">
+      <!-- Netlify Identity widget for login -->
       <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
+      <!-- Decap CMS -->
       <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-      <!-- Hide any remaining UI controls if they get re-rendered -->
-      <script>
-        function hideBits() {
-          const sels = [
-            'button[title*="Quick add"]','[aria-label*="Quick add"]','[data-testid*="quick-add"]','[class*="QuickAdd"]','[class*="quickAdd"]',
-            '[aria-label="Open user menu"]','[data-testid*="user-menu"]','[class*="UserMenu"]','[class*="AvatarButton"]',
-            'button[title*="Toggle"]','button[aria-label*="Toggle"]','[aria-label*="toggle"]','[data-testid*="toggle"]',
-            '[class*="PaneToggle"]','[class*="EditorToolbar"]','[class*="EditorControlBar"]','[class*="PaneControl"]',
-            '[class*="PaneResizer"]','[class*="SplitPane"]','[class*="DragHandle"]',
-            '[class*="EditorPreviewPane"]','[class*="PreviewPane"]','[role="region"][aria-label*="Preview"]'
-          ];
-          sels.forEach(s => document.querySelectorAll(s).forEach(el => el.style.display = 'none'));
-        }
-        hideBits();
-        new MutationObserver(hideBits).observe(document.documentElement, { childList: true, subtree: true });
-        window.addEventListener('load', hideBits);
-      </script>
     </main>
   </body>
 </html>

@@ -1,5 +1,25 @@
-/* Hide the floating "Quick add" toolbar in Decap CMS */
-[class*="QuickAddButton"],
-[class*="QuickAdd"] {
+/* --- Hide the floating "Quick add" bar and its handle --- */
+button[title*="Quick add"],
+[aria-label*="Quick add"],
+[data-testid*="quick-add"],
+[class*="QuickAdd"],
+[class*="quickAdd"] {
   display: none !important;
 }
+
+/* --- Hide the user menu / logout avatar button (top-right) --- */
+[aria-label="Open user menu"],
+[data-testid*="user-menu"],
+[class*="UserMenu"],
+[class*="AvatarButton"] {
+  display: none !important;
+}
+
+/* (Optional) Hide the preview pane on the right – uncomment to show form only */
+/*
+[class*="EditorPreviewPane"],
+[class*="PreviewPane"],
+[title="Preview"] {
+  display: none !important;
+}
+*/

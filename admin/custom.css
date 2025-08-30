@@ -1,34 +1,61 @@
+/* =========================
+   Kid-mode Admin polish
+   ========================= */
 
-/* --- Dock Decap's floating editor toolbar to the top --- */
-
-/* Catch the toolbar (class names are hashed, so use robust attribute selectors) */
+/* 1) Dock the editor toolbar (Contents / Workflow / Media …) at the top */
 [role="toolbar"],
 [class*="Toolbar"],
 [class*="EditorToolbar"],
 [class*="ControlBar"],
 [class*="PaneControl"] {
-  position: sticky !important;   /* stick to the top as you scroll */
-  top: 0 !important;             /* directly under the main header */
+  position: sticky !important;
+  top: 0 !important;          /* directly under the site header */
   left: 0 !important;
   right: 0 !important;
-  transform: none !important;    /* cancel any floating/dragging transforms */
+  transform: none !important;
   margin: 0 !important;
   width: 100% !important;
   z-index: 1000 !important;
-  background: #0b0e14 !important; /* match your dark theme */
+  background: #0b0e14 !important;      /* match site dark */
   border-bottom: 1px solid #1f232b !important;
 }
 
-/* Make the main editor area leave space for the docked toolbar */
+/* 2) Leave room so the form isn’t hidden beneath toolbar */
 [class*="AppMain"],
 [class*="Editor"],
 [class*="EditorContainer"],
 [class*="EntryEditor"] {
-  padding-top: 52px !important; /* room for the toolbar height */
+  padding-top: 56px !important; /* room for docked toolbar */
 }
 
-/* OPTIONAL: if the bar still overlaps in some views, ensure child panes respect the padding */
+/* 3) Form full width (assumes preview is disabled via editor.preview: false) */
 [class*="PaneContainer"],
-[class*="ContentPane"] {
-  padding-top: 0 !important;
+[class*="ContentPane"],
+[class*="Editor"] [class*="EditorContainer"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* 4) Hide the plain "Save" button so kids just press Publish */
+button[aria-label="Save"],
+button[title="Save"] {
+  display: none !important;
+}
+
+/* 5) Optional tidying: hide Quick add & user/avatar menu (top-right) */
+button[title*="Quick add"],
+[aria-label*="Quick add"],
+[data-testid*="quick-add"],
+[class*="QuickAdd"],
+[class*="quickAdd"],
+[aria-label="Open user menu"],
+[data-testid*="user-menu"],
+[class*="UserMenu"],
+[class*="AvatarButton"] {
+  display: none !important;
+}
+
+/* 6) Inputs a bit larger for tiny fingers */
+input, textarea, select, button {
+  font-size: 16px !important;   /* prevents iOS zoom */
 }

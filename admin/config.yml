@@ -5,7 +5,7 @@ backend:
 media_folder: "uploads"
 public_folder: "/uploads"
 
-publish_mode: editorial_workflow
+publish_mode: simple
 
 editor:
   preview: true

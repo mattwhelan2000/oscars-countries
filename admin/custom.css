@@ -1,0 +1,4 @@
+/* Hide the "Quick add" floating toolbar */
+[class*="QuickAddButton"] {
+  display: none !important;
+}

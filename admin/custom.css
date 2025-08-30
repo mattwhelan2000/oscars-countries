@@ -1,1 +1,34 @@
 
+/* --- Dock Decap's floating editor toolbar to the top --- */
+
+/* Catch the toolbar (class names are hashed, so use robust attribute selectors) */
+[role="toolbar"],
+[class*="Toolbar"],
+[class*="EditorToolbar"],
+[class*="ControlBar"],
+[class*="PaneControl"] {
+  position: sticky !important;   /* stick to the top as you scroll */
+  top: 0 !important;             /* directly under the main header */
+  left: 0 !important;
+  right: 0 !important;
+  transform: none !important;    /* cancel any floating/dragging transforms */
+  margin: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: #0b0e14 !important; /* match your dark theme */
+  border-bottom: 1px solid #1f232b !important;
+}
+
+/* Make the main editor area leave space for the docked toolbar */
+[class*="AppMain"],
+[class*="Editor"],
+[class*="EditorContainer"],
+[class*="EntryEditor"] {
+  padding-top: 52px !important; /* room for the toolbar height */
+}
+
+/* OPTIONAL: if the bar still overlaps in some views, ensure child panes respect the padding */
+[class*="PaneContainer"],
+[class*="ContentPane"] {
+  padding-top: 0 !important;
+}

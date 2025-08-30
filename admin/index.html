@@ -5,34 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="custom.css?v=30">
+    <link rel="stylesheet" href="custom.css?v=40">
   </head>
   <body>
     <header>
       <div class="container">
         <h1>Site Admin</h1>
-        <p class="small">Use this editor to add or update countries.</p>
+        <p class="small">Use this editor to add or update countries. Parents: set up Netlify Identity.</p>
       </div>
     </header>
-
-    <!-- Simple, reliable toolbar (real links) -->
-    <nav id="kid-toolbar">
-      <a class="btn" href="/admin/#/collections/countries">Contents</a>
-      <a class="btn" href="/admin/#/media">Media</a>
-      <span class="spacer"></span>
-      <button id="logout-btn" class="btn" aria-label="Log out">Log out</button>
-    </nav>
 
     <main class="container card">
       <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
       <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-      <script>
-        // Log out via Netlify Identity
-        document.getElementById('logout-btn').addEventListener('click', () => {
-          if (window.netlifyIdentity) window.netlifyIdentity.logout();
-        });
-      </script>
     </main>
   </body>
 </html>

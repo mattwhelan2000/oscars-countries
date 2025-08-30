@@ -1,23 +1,23 @@
 {
-  "code": "IT",
+  "highest_point_m": 4810,
+  "facts": "Cradle of the Renaissance; pasta, opera, design.",
   "name": "Italy",
   "flag": "https://flagcdn.com/w320/it.png",
-  "video_embed": "https://www.youtube.com/embed/Iqf-9Z0C0Z8",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "IT",
   "population": 59000000,
-  "area_km2": 301340,
-  "highest_point_m": 4810,
+  "stamps": [
+    "Poste Italiane definitive"
+  ],
   "currency": "Euro (EUR)",
+  "history": "Unified in 1861; major role in European culture.",
+  "video_embed": "https://www.youtube.com/embed/Iqf-9Z0C0Z8",
+  "location": "Southern Europe; Italian peninsula and islands",
   "animals": [
     "Italian wolf",
     "Brown bear (Alps)"
   ],
-  "stamps": [
-    "Poste Italiane definitive"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "Southern Europe; Italian peninsula and islands",
-  "facts": "Cradle of the Renaissance; pasta, opera, design.",
-  "history": "Unified in 1861; major role in European culture."
+  "area_km2": 301340
 }

@@ -1,37 +1,45 @@
 /* ============================================================
-   Minimal fix: Pin the CMS toolbar and prevent overlap
+   Admin UI — Dock the editor toolbar & make it visible
    ============================================================ */
 
-/* 1) Pin the toolbar (the bar with "Contents / Media / Quick add / Logout") */
+/* 1) Target the sub-toolbar (Contents / Media / Quick add / user) */
 [role="toolbar"] {
-  position: fixed !important;   /* take it out of the flow and stick it */
-  top: 64px !important;          /* sits just below your Admin header */
+  position: sticky !important;
+  top: 64px !important;         /* under your header */
   left: 0 !important;
   right: 0 !important;
-  transform: none !important;    /* cancel any floating translate() */
-  margin: 0 !important;
   width: 100% !important;
-  z-index: 1000 !important;      /* above content */
-  background: #0b0e14 !important;
-  border-bottom: 1px solid #1f232b !important;
+  transform: none !important;
+  margin: 0 !important;
+  z-index: 2000 !important;
+  background: #d3d3d3 !important;  /* light grey background */
+  border-bottom: 2px solid #666 !important;
+  min-height: 44px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px;
+  padding: 4px 12px;
 }
 
-/* 2) Give the whole page enough space so the toolbar never covers fields */
-html, body {
-  /* header (~64px) + toolbar (~48px) + a little breathing room */
-  padding-top: 120px !important;
-}
-
-/* 3) Make sure inner editor areas don’t add their own top margins */
+/* 2) Make sure editor content is pushed below it */
 [class*="AppMain"],
 [class*="EditorContainer"],
 [class*="EntryEditor"],
-[class*="EditorMain"],
-[class*="ContentPane"],
-[class*="PaneContainer"] {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+[class*="EditorMain"] {
+  padding-top: 110px !important;
 }
 
-/* Touch-friendly inputs (iPad) */
-input, select, textarea, button { font-size: 16px !important; }
+/* 3) Ensure toolbar spans both columns (form + preview) */
+[class*="SplitPane"],
+[class*="PaneContainer"] {
+  flex-direction: column !important;
+}
+[class*="SplitPane"] > [role="toolbar"] {
+  order: -1; /* force it above form + preview */
+}
+
+/* 4) Touch-friendly inputs (iPad) */
+input, select, textarea, button {
+  font-size: 16px !important;
+}

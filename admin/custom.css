@@ -1,30 +1,5 @@
-/* ===== Our simple toolbar ===== */
-#kid-toolbar {
-  position: sticky;
-  top: 0;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: #e5e7eb;
-  border-bottom: 1px solid #c5cbd3;
-}
-#kid-toolbar .spacer { flex: 1 1 auto; }
-#kid-toolbar .btn {
-  display: inline-block;
-  text-decoration: none;
-  color: #111;
-  border: 1px solid #c5cbd3;
-  background: #fff;
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 14px;
-  cursor: pointer;
-}
-#kid-toolbar .btn:hover { background: #f5f6f7; }
+/* ===== Hide the thin floating divider/toolbar + "Quick add" bubble ===== */
 
-/* ===== Hide ONLY the thin floating divider/toolbar & "Quick add" bubble ===== */
 /* The “quick add” bubble */
 button[title*="Quick add"],
 [aria-label*="Quick add"],

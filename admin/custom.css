@@ -33,3 +33,30 @@ div[class*="PaneControl"] {
 
 /* Touch-friendly inputs (iPad) */
 input, select, textarea, button { font-size: 16px !important; }
+
+/* ===== Custom rules to dock the Decap CMS toolbar to the top ===== */
+
+/* Dock the main Decap CMS toolbar to the top */
+div[class*="AppHeader"] {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important; /* Ensure it stays above other content */
+  box-sizing: border-box !important; /* Include padding and border in the element's total width and height */
+  /* You might want to add a background color if the default is transparent */
+  /* background-color: #f0f0f0 !important; */
+}
+
+/* Adjust the main content area to prevent it from being hidden behind the fixed toolbar */
+/* Adjust '60px' if the toolbar's height is different after docking */
+main.container.card {
+  margin-top: 60px !important;
+}
+
+/* Potentially override any conflicting 'display: none' rules if the toolbar is hidden */
+/* (This ensures elements like "Contents", "Media", "User Icon" are visible if they were hidden by your previous rules) */
+div[class*="PaneControlBar"],
+div[class*="PaneControl"] {
+  display: flex !important; /* Use flex or block depending on their original layout */
+  /* You might need to refine these specific selectors if your toolbar components still don't show */
+}

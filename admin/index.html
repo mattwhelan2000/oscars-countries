@@ -5,62 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="custom.css?v=13">
+    <link rel="stylesheet" href="custom.css?v=20">
   </head>
   <body>
     <header>
       <div class="container">
         <h1>Site Admin</h1>
-        <p class="small">Use this editor to add or update countries. Parents: set up Netlify Identity.</p>
+        <p class="small">Use this editor to add or update countries.</p>
       </div>
     </header>
 
-    <!-- 👇 our docking strip lives here, beneath your header -->
-    <div id="cms-toolbar-dock"></div>
+    <!-- Our own, simple toolbar -->
+    <nav id="kid-toolbar">
+      <button data-goto="#/collections/countries" aria-label="Contents">Contents</button>
+      <button data-goto="#/media" aria-label="Media">Media</button>
+      <span class="spacer"></span>
+      <button id="logout-btn" aria-label="Log out">Log out</button>
+    </nav>
 
     <main class="container card">
       <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
       <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-      <!-- Move the Decap global toolbar ("Contents/Media/Quick add/Logout") into our dock -->
       <script>
-        (function () {
-          const dock = document.getElementById('cms-toolbar-dock');
+        // Handle toolbar buttons
+        document.querySelectorAll('#kid-toolbar [data-goto]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-goto');
+            if (target) location.hash = target;
+          });
+        });
 
-          function isTheToolbar(el) {
-            if (!el) return false;
-            const txt = (el.textContent || '').toLowerCase();
-            return txt.includes('contents') && txt.includes('media');
-          }
-
-          function tryDock() {
-            if (!dock) return;
-
-            // Candidates Decap uses across versions
-            const candidates = Array.from(document.querySelectorAll(
-              '[role="toolbar"], header[aria-label], [data-testid*="top"], [data-testid*="app-header"], [class*="GlobalToolbar"], [class*="TopBar"], [class*="EditorToolbar"]'
-            ));
-
-            const bar = candidates.find(isTheToolbar);
-            if (bar && !dock.contains(bar)) {
-              // Neutralize floating styles
-              Object.assign(bar.style, {
-                position: 'static',
-                transform: 'none',
-                width: '100%',
-                margin: '0'
-              });
-              dock.innerHTML = '';
-              dock.appendChild(bar);
-            }
-          }
-
-          // Run now and whenever Decap re-renders
-          const mo = new MutationObserver(tryDock);
-          mo.observe(document.documentElement, { childList: true, subtree: true });
-          window.addEventListener('load', tryDock);
-          tryDock();
-        })();
+        // Logout via Netlify Identity
+        const logoutBtn = document.getElementById('logout-btn');
+        logoutBtn.addEventListener('click', () => {
+          if (window.netlifyIdentity) window.netlifyIdentity.logout();
+        });
       </script>
     </main>
   </body>

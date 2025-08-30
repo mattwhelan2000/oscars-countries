@@ -1,0 +1,23 @@
+{
+  "code": "JP",
+  "name": "Japan",
+  "flag": "https://flagcdn.com/w320/jp.png",
+  "video_embed": "https://www.youtube.com/embed/MHhIu7T6Q8Q",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 123000000,
+  "area_km2": 377975,
+  "highest_point_m": 3776,
+  "currency": "Japanese yen (JPY)",
+  "animals": [
+    "Japanese macaque",
+    "Red-crowned crane"
+  ],
+  "stamps": [
+    "Cherry blossom series"
+  ],
+  "location": "East Asia; island nation in the Pacific",
+  "facts": "Blend of tradition and tech; bullet trains, sushi, anime.",
+  "history": "Shogunate era to modern economic boom; WWII and recovery."
+}

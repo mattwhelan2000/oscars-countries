@@ -1,0 +1,24 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>World Explorer</h1>
+        <p class="small">Browse countries. Click to view details. Add new entries by editing <code>/data/countries.json</code>.</p>
+        <input id="filter" class="input" placeholder="Filter by name or code…" />
+      </div>
+    </header>
+    <main class="container">
+      <div class="grid" data-list></div>
+    </main>
+    <div class="footer small">Static template • Host on Netlify / Vercel / GitHub Pages • Edit <code>countries.json</code> to update.</div>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "code": "US",
+  "name": "United States",
+  "flag": "https://flagcdn.com/w320/us.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png",
+    "./images/placeholder.png"
+  ],
+  "population": 334000000,
+  "area_km2": 9833517,
+  "highest_point_m": 6190,
+  "currency": "US dollar (USD)",
+  "animals": [
+    "Bald eagle",
+    "American bison"
+  ],
+  "stamps": [
+    "Forever stamps"
+  ],
+  "location": "North America; between Canada and Mexico",
+  "facts": "World's largest economy.",
+  "history": "Independence declared in 1776."
+}

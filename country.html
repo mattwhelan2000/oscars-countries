@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-bind="name">Country</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body data-page="country">
+    <header>
+      <div class="container hero">
+        <img data-bind="flag" src="./images/placeholder.png" alt="Flag">
+        <div>
+          <h1><span data-bind="name">Country Name</span> <span class="badge" data-bind="code">XXX</span></h1>
+          <div class="meta">
+            <a class="button" data-bind="back" href="./index.html">← All countries</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="section media">
+        <div class="embed" data-bind="video"></div>
+        <div data-bind="images">
+          <img src="./images/placeholder.png" alt="Placeholder">
+        </div>
+      </div>
+
+      <div class="section kv">
+        <div class="card">
+          <h3>Population</h3>
+          <div class="bar"><span data-bar="population"></span></div>
+          <div class="label-row"><span>Now</span><span data-stat="population-val">—</span></div>
+        </div>
+        <div class="card">
+          <h3>Land Area</h3>
+          <div class="bar"><span data-bar="area"></span></div>
+          <div class="label-row"><span>km²</span><span data-stat="area-val">—</span></div>
+        </div>
+        <div class="card">
+          <h3>Highest Point</h3>
+          <div class="bar"><span data-bar="high"></span></div>
+          <div class="label-row"><span>meters</span><span data-stat="high-val">—</span></div>
+        </div>
+        <div class="card">
+          <h3>Currency</h3>
+          <p data-bind="currency">—</p>
+        </div>
+      </div>
+
+      <div class="section grid">
+        <div class="card">
+          <h3>Animals</h3>
+          <p data-bind="animals">—</p>
+        </div>
+        <div class="card">
+          <h3>Stamps</h3>
+          <p data-bind="stamps">—</p>
+        </div>
+        <div class="card">
+          <h3>Geographic Location</h3>
+          <p data-bind="location">—</p>
+        </div>
+        <div class="card">
+          <h3>Facts / History</h3>
+          <p data-bind="facts">—</p>
+          <p class="small" data-bind="history">—</p>
+        </div>
+      </div>
+    </main>
+    <div class="footer small">Edit <code>/data/countries.json</code> to update this page.</div>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>

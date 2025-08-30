@@ -1,0 +1,23 @@
+{
+  "code": "DE",
+  "name": "Germany",
+  "flag": "https://flagcdn.com/w320/de.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 84000000,
+  "area_km2": 357022,
+  "highest_point_m": 2962,
+  "currency": "Euro (EUR)",
+  "animals": [
+    "Red deer",
+    "Wild boar"
+  ],
+  "stamps": [
+    "Deutsche Post definitive series"
+  ],
+  "location": "Central Europe; borders nine countries",
+  "facts": "Engineering powerhouse; famous for autobahns and Oktoberfest.",
+  "history": "Reunification in 1990; key EU member."
+}

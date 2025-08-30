@@ -1,0 +1,23 @@
+{
+  "code": "GB",
+  "name": "United Kingdom",
+  "flag": "https://flagcdn.com/w320/gb.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 67000000,
+  "area_km2": 243610,
+  "highest_point_m": 1345,
+  "currency": "Pound sterling (GBP)",
+  "animals": [
+    "Red fox",
+    "Hedgehog"
+  ],
+  "stamps": [
+    "Machin series"
+  ],
+  "location": "Northwestern Europe; island of Great Britain and part of Ireland",
+  "facts": "Parliamentary monarchy; birthplace of the Industrial Revolution.",
+  "history": "Once a global empire; devolved nations since late 1990s."
+}

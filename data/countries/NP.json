@@ -1,0 +1,23 @@
+{
+  "code": "NP",
+  "name": "Nepal",
+  "flag": "https://flagcdn.com/w320/np.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 30500000,
+  "area_km2": 147516,
+  "highest_point_m": 8848,
+  "currency": "Nepalese rupee (NPR)",
+  "animals": [
+    "Snow leopard",
+    "Red panda"
+  ],
+  "stamps": [
+    "Himalayan series"
+  ],
+  "location": "South Asia; between China and India",
+  "facts": "Home to Mt. Everest.",
+  "history": "Unified in the 18th century; became a republic in 2008."
+}

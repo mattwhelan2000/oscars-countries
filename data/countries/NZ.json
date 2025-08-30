@@ -1,0 +1,23 @@
+{
+  "code": "NZ",
+  "name": "New Zealand",
+  "flag": "https://flagcdn.com/w320/nz.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 5200000,
+  "area_km2": 268021,
+  "highest_point_m": 3724,
+  "currency": "New Zealand dollar (NZD)",
+  "animals": [
+    "Kiwi",
+    "Kea"
+  ],
+  "stamps": [
+    "Health stamps"
+  ],
+  "location": "Oceania; South Pacific, two main islands",
+  "facts": "Dramatic landscapes; M\u0101ori culture; adventure sports.",
+  "history": "Treaty of Waitangi (1840); modern multicultural nation."
+}

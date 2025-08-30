@@ -1,0 +1,24 @@
+{
+  "code": "BR",
+  "name": "Brazil",
+  "flag": "https://flagcdn.com/w320/br.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 203000000,
+  "area_km2": 8515767,
+  "highest_point_m": 2995,
+  "currency": "Brazilian real (BRL)",
+  "animals": [
+    "Jaguar",
+    "Macaw",
+    "Capybara"
+  ],
+  "stamps": [
+    "Brazil Empire classics"
+  ],
+  "location": "South America; Amazon Basin dominates the north",
+  "facts": "World\u2019s largest rainforest; football (soccer) powerhouse.",
+  "history": "Portuguese colony to republic; diverse culture."
+}

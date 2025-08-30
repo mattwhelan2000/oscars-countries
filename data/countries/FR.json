@@ -1,0 +1,23 @@
+{
+  "code": "FR",
+  "name": "France",
+  "flag": "https://flagcdn.com/w320/fr.png",
+  "video_embed": "https://www.youtube.com/embed/0fZCCAqoSwY",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 68000000,
+  "area_km2": 551695,
+  "highest_point_m": 4808,
+  "currency": "Euro (EUR)",
+  "animals": [
+    "Gallic rooster",
+    "European bison (reintroduced)"
+  ],
+  "stamps": [
+    "La Marianne series"
+  ],
+  "location": "Western Europe; borders Belgium, Germany, Italy, Spain, and more",
+  "facts": "Home to the Eiffel Tower; global leader in wine and cuisine.",
+  "history": "French Revolution (1789); influential in European history."
+}

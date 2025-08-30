@@ -1,0 +1,23 @@
+{
+  "code": "IN",
+  "name": "India",
+  "flag": "https://flagcdn.com/w320/in.png",
+  "video_embed": "https://www.youtube.com/embed/9No-FiEInLA",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 1420000000,
+  "area_km2": 3287263,
+  "highest_point_m": 8586,
+  "currency": "Indian rupee (INR)",
+  "animals": [
+    "Bengal tiger",
+    "Indian elephant"
+  ],
+  "stamps": [
+    "India Post definitive series"
+  ],
+  "location": "South Asia; borders Pakistan, China, Nepal, Bangladesh, Myanmar",
+  "facts": "One of the world\u2019s oldest civilizations; diverse languages and cuisines.",
+  "history": "Independence in 1947; rapid modern growth."
+}

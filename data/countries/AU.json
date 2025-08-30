@@ -1,0 +1,24 @@
+{
+  "code": "AU",
+  "name": "Australia",
+  "flag": "https://flagcdn.com/w320/au.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 27000000,
+  "area_km2": 7692024,
+  "highest_point_m": 2228,
+  "currency": "Australian dollar (AUD)",
+  "animals": [
+    "Kangaroo",
+    "Koala",
+    "Emu"
+  ],
+  "stamps": [
+    "Kangaroo and Map series"
+  ],
+  "location": "Oceania; continent and island nation",
+  "facts": "Unique marsupials and Great Barrier Reef.",
+  "history": "Indigenous cultures for 60,000+ years; federation in 1901."
+}

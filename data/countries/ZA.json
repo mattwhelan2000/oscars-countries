@@ -1,0 +1,24 @@
+{
+  "code": "ZA",
+  "name": "South Africa",
+  "flag": "https://flagcdn.com/w320/za.png",
+  "video_embed": "https://www.youtube.com/embed/m4lt1jH59zc",
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/6/65/Table_Mountain%2C_Cape_Town.jpg"
+  ],
+  "population": 60000000,
+  "area_km2": 1221037,
+  "highest_point_m": 3482,
+  "currency": "South African rand (ZAR)",
+  "animals": [
+    "Lion",
+    "Elephant",
+    "Rhinoceros"
+  ],
+  "stamps": [
+    "Big Five series"
+  ],
+  "location": "Southern tip of Africa",
+  "facts": "Known for diverse wildlife and Table Mountain.",
+  "history": "Apartheid ended in 1994; Nelson Mandela became president."
+}

@@ -1,0 +1,24 @@
+{
+  "code": "CA",
+  "name": "Canada",
+  "flag": "https://flagcdn.com/w320/ca.png",
+  "video_embed": "https://www.youtube.com/embed/vlDzYIIOYmM",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 40500000,
+  "area_km2": 9984670,
+  "highest_point_m": 5959,
+  "currency": "Canadian dollar (CAD)",
+  "animals": [
+    "Beaver",
+    "Moose",
+    "Canada goose"
+  ],
+  "stamps": [
+    "Maple leaf series"
+  ],
+  "location": "North America; bordered by the USA and Arctic Ocean",
+  "facts": "Known for vast wilderness, multicultural cities, and hockey.",
+  "history": "Confederation in 1867; bilingual heritage (English/French)."
+}

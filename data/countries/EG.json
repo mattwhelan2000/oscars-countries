@@ -1,0 +1,23 @@
+{
+  "code": "EG",
+  "name": "Egypt",
+  "flag": "https://flagcdn.com/w320/eg.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 111000000,
+  "area_km2": 1002450,
+  "highest_point_m": 2629,
+  "currency": "Egyptian pound (EGP)",
+  "animals": [
+    "Dromedary",
+    "Nile crocodile"
+  ],
+  "stamps": [
+    "Pharaonic series"
+  ],
+  "location": "Northeast Africa; Sinai connects to Asia",
+  "facts": "Pyramids and Nile civilization; strategic Suez Canal.",
+  "history": "Ancient kingdoms; modern republic since 1953."
+}

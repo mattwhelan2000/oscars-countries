@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Record a Video</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Record a Video</h1>
+      <p class="small">Tip for kids: Click "Start Camera", then "Start Recording". When done, click "Stop". You can save the file or upload it.</p>
+    </div>
+  </header>
+  <main class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>Camera</h3>
+        <video id="preview" playsinline autoplay muted style="width:100%;border-radius:8px;border:1px solid #1f232b"></video>
+        <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+          <button class="button" id="startCam">Start Camera</button>
+          <button class="button" id="startRec">Start Recording</button>
+          <button class="button" id="stopRec">Stop</button>
+          <a class="button" id="downloadLink" download="my-video.webm" style="display:none">Download Video</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Upload (optional)</h3>
+        <p class="small">Parent setup required: set your Cloudinary cloud name and an <em>unsigned</em> upload preset below. This keeps it simple—no login for your child.</p>
+        <label class="small">Cloud name: <input id="cloudName" class="input" placeholder="e.g. mycloud"></label>
+        <label class="small">Unsigned preset: <input id="uploadPreset" class="input" placeholder="e.g. kids_uploads"></label>
+        <label class="small">Folder (optional): <input id="uploadFolder" class="input" placeholder="e.g. country-videos"></label>
+        <button class="button" id="uploadBtn">Upload to Cloudinary</button>
+        <div id="uploadStatus" class="small" style="margin-top:8px"></div>
+      </div>
+    </div>
+  </main>
+  <script>
+  let mediaStream, mediaRecorder, chunks=[];
+
+  const $ = sel => document.querySelector(sel);
+  const preview = $('#preview');
+  $('#startCam').onclick = async () => {
+    try{
+      mediaStream = await navigator.mediaDevices.getUserMedia({video:true, audio:true});
+      preview.srcObject = mediaStream;
+    }catch(e){ alert('Could not access camera/mic: '+e.message); }
+  };
+  $('#startRec').onclick = () => {
+    if(!mediaStream) return alert('Start camera first.');
+    chunks = [];
+    mediaRecorder = new MediaRecorder(mediaStream, {mimeType:'video/webm;codecs=vp9,opus'});
+    mediaRecorder.ondataavailable = e => { if(e.data.size>0) chunks.push(e.data); };
+    mediaRecorder.onstop = e => {
+      const blob = new Blob(chunks, {type:'video/webm'});
+      const url = URL.createObjectURL(blob);
+      const link = $('#downloadLink');
+      link.href = url;
+      link.style.display = 'inline-block';
+      link.textContent = 'Download Video (' + Math.round(blob.size/1024) + ' KB)';
+      window._lastBlob = blob;
+    };
+    mediaRecorder.start();
+  };
+  $('#stopRec').onclick = () => {
+    if(mediaRecorder && mediaRecorder.state !== 'inactive'){
+      mediaRecorder.stop();
+    }
+  };
+
+  $('#uploadBtn').onclick = async () => {
+    const cloud = $('#cloudName').value.trim();
+    const preset = $('#uploadPreset').value.trim();
+    const folder = $('#uploadFolder').value.trim();
+    if(!cloud || !preset) return alert('Enter cloud name and unsigned preset.');
+    if(!window._lastBlob) return alert('Record a video first.');
+
+    const form = new FormData();
+    form.append('file', window._lastBlob);
+    form.append('upload_preset', preset);
+    if(folder) form.append('folder', folder);
+
+    $('#uploadStatus').textContent = 'Uploading...';
+    try {
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${cloud}/auto/upload`, {method:'POST', body:form});
+      if(!res.ok) throw new Error('Upload failed');
+      const data = await res.json();
+      $('#uploadStatus').innerHTML = 'Uploaded! Public URL: <a href="'+data.secure_url+'" target="_blank">'+data.secure_url+'</a>';
+    } catch (e){
+      $('#uploadStatus').textContent = 'Error: '+e.message;
+    }
+  };
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "code": "KE",
+  "name": "Kenya",
+  "flag": "https://flagcdn.com/w320/ke.png",
+  "video_embed": "",
+  "images": [
+    "./images/placeholder.png"
+  ],
+  "population": 56000000,
+  "area_km2": 580367,
+  "highest_point_m": 5199,
+  "currency": "Kenyan shilling (KES)",
+  "animals": [
+    "Lion",
+    "Elephant",
+    "Giraffe"
+  ],
+  "stamps": [
+    "Wildlife series"
+  ],
+  "location": "East Africa; on the equator, Indian Ocean coast",
+  "facts": "Famed for savannahs and the Great Rift Valley.",
+  "history": "Independence in 1963; Swahili and English official."
+}

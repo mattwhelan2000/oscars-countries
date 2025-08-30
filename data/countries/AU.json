@@ -1,24 +1,24 @@
 {
-  "code": "AU",
+  "highest_point_m": 2228,
+  "facts": "Unique marsupials and Great Barrier Reef.",
   "name": "Australia",
   "flag": "https://flagcdn.com/w320/au.png",
-  "video_embed": "",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "AU",
   "population": 27000000,
-  "area_km2": 7692024,
-  "highest_point_m": 2228,
+  "stamps": [
+    "Kangaroo and Map series"
+  ],
   "currency": "Australian dollar (AUD)",
+  "history": "Indigenous cultures for 60,000+ years; federation in 1901.",
+  "video_embed": "",
+  "location": "Oceania; continent and island nation",
   "animals": [
     "Kangaroo",
     "Koala",
     "Emu"
   ],
-  "stamps": [
-    "Kangaroo and Map series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "Oceania; continent and island nation",
-  "facts": "Unique marsupials and Great Barrier Reef.",
-  "history": "Indigenous cultures for 60,000+ years; federation in 1901."
+  "area_km2": 7692024
 }

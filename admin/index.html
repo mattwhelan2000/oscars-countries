@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin</title>
     <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="custom.css?v=20">
+    <link rel="stylesheet" href="custom.css?v=30">
   </head>
   <body>
     <header>
@@ -15,12 +15,12 @@
       </div>
     </header>
 
-    <!-- Our own, simple toolbar -->
+    <!-- Simple, reliable toolbar (real links) -->
     <nav id="kid-toolbar">
-      <button data-goto="#/collections/countries" aria-label="Contents">Contents</button>
-      <button data-goto="#/media" aria-label="Media">Media</button>
+      <a class="btn" href="/admin/#/collections/countries">Contents</a>
+      <a class="btn" href="/admin/#/media">Media</a>
       <span class="spacer"></span>
-      <button id="logout-btn" aria-label="Log out">Log out</button>
+      <button id="logout-btn" class="btn" aria-label="Log out">Log out</button>
     </nav>
 
     <main class="container card">
@@ -28,17 +28,8 @@
       <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
       <script>
-        // Handle toolbar buttons
-        document.querySelectorAll('#kid-toolbar [data-goto]').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-goto');
-            if (target) location.hash = target;
-          });
-        });
-
-        // Logout via Netlify Identity
-        const logoutBtn = document.getElementById('logout-btn');
-        logoutBtn.addEventListener('click', () => {
+        // Log out via Netlify Identity
+        document.getElementById('logout-btn').addEventListener('click', () => {
           if (window.netlifyIdentity) window.netlifyIdentity.logout();
         });
       </script>

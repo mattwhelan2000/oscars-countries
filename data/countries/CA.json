@@ -1,24 +1,24 @@
 {
-  "code": "CA",
+  "highest_point_m": 5959,
+  "facts": "Known for vast wilderness, multicultural cities, and hockey.",
   "name": "Canada",
   "flag": "https://flagcdn.com/w320/ca.png",
-  "video_embed": "https://www.youtube.com/embed/vlDzYIIOYmM",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "CA",
   "population": 40500000,
-  "area_km2": 9984670,
-  "highest_point_m": 5959,
+  "stamps": [
+    "Maple leaf series"
+  ],
   "currency": "Canadian dollar (CAD)",
+  "history": "Confederation in 1867; bilingual heritage (English/French).",
+  "video_embed": "https://www.youtube.com/embed/vlDzYIIOYmM",
+  "location": "North America; bordered by the USA and Arctic Ocean",
   "animals": [
     "Beaver",
     "Moose",
     "Canada goose"
   ],
-  "stamps": [
-    "Maple leaf series"
+  "images": [
+    "uploads/img_0577.jpeg"
   ],
-  "location": "North America; bordered by the USA and Arctic Ocean",
-  "facts": "Known for vast wilderness, multicultural cities, and hockey.",
-  "history": "Confederation in 1867; bilingual heritage (English/French)."
+  "area_km2": 9984670
 }

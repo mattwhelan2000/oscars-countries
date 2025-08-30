@@ -64,8 +64,8 @@ input, select, textarea, button {
    block below to simply push the whole editor down enough so nothing
    can overlap. This keeps everything visible for Oscar.
 */
-/*
+
 body, [class*="container"], [class*="card"], [class*="AppMain"] {
   padding-top: 140px !important;   // big, brute-force spacing
 }
-*/
+

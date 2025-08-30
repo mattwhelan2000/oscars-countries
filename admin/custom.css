@@ -1,16 +1,4 @@
-/* Hide Decap's floating/global toolbar completely */
-[role="toolbar"],
-header[aria-label],
-[data-testid*="app-header"],
-[data-testid*="top-bar"],
-[class*="GlobalToolbar"],
-[class*="TopBar"],
-[class*="EditorToolbar"],
-[class*="ControlBar"] {
-  display: none !important;
-}
-
-/* Our simple, docked toolbar */
+/* ===== Our simple toolbar ===== */
 #kid-toolbar {
   position: sticky;
   top: 0;
@@ -19,18 +7,14 @@ header[aria-label],
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: #e5e7eb;          /* light gray so it’s clearly visible */
+  background: #e5e7eb;
   border-bottom: 1px solid #c5cbd3;
 }
-
-/* Push content below our toolbar a bit */
-.container.card {
-  margin-top: 8px;
-}
-
-/* Toolbar buttons */
-#kid-toolbar button {
-  appearance: none;
+#kid-toolbar .spacer { flex: 1 1 auto; }
+#kid-toolbar .btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #111;
   border: 1px solid #c5cbd3;
   background: #fff;
   border-radius: 8px;
@@ -38,8 +22,39 @@ header[aria-label],
   font-size: 14px;
   cursor: pointer;
 }
-#kid-toolbar button:hover { background: #f5f6f7; }
-#kid-toolbar .spacer { flex: 1 1 auto; }
+#kid-toolbar .btn:hover { background: #f5f6f7; }
+
+/* ===== Hide ONLY the thin floating divider/toolbar & "Quick add" bubble ===== */
+/* The “quick add” bubble */
+button[title*="Quick add"],
+[aria-label*="Quick add"],
+[data-testid*="quick-add"],
+[class*="QuickAdd"],
+[class*="quickAdd"] {
+  display: none !important;
+}
+
+/* The thin strip with the round handle (covers most Decap builds) */
+[role="separator"],
+div[class*="Resizer"],
+div[class*="PaneResizer"],
+div[class*="SplitPane__Resizer"],
+div[class*="Editor__Divider"],
+div[class*="DragHandle"],
+div[class*="PaneControlBar"],
+div[class*="PaneControl"] {
+  display: none !important;
+}
+
+/* Keep editor layout tight after removing the strip */
+[class*="PaneContainer"],
+[class*="EditorMain"],
+[class*="ContentPane"],
+[class*="EditorContainer"],
+[class*="EntryEditor"] {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 
 /* Touch-friendly inputs (iPad) */
 input, select, textarea, button { font-size: 16px !important; }

@@ -7,6 +7,9 @@ public_folder: "/uploads"
 
 publish_mode: editorial_workflow
 
+editor:
+  preview: false
+
 collections:
   - name: "countries"
     label: "Countries"

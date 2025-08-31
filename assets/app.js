@@ -68,7 +68,7 @@ async function initCountry(){
   // Sections
   setText('[data-bind="animals"]', (item.animals||[]).join(', '));
   setText('[data-bind="currency"]', item.currency);
-  setText('[data-bind="stamps"]', (item.stamps||[]).join(', '));
+  setText('[data-bind="languages"]', (item.languages||[]).join(', '));
   setText('[data-bind="location"]', item.location || '—');
   setText('[data-bind="facts"]', item.facts || '—');
   setText('[data-bind="history"]', item.history || '—');

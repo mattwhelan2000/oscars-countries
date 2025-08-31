@@ -37,10 +37,10 @@ collections:
         name: "animals"
         widget: "list"
         field: {label: "Animal", name: "animal", widget: "string"}
-      - label: "Stamps"
-        name: "Languages"
+      - label: "Language(s)"
+        name: "stamps"
         widget: "list"
-        field: {label: "Stamp", name: "Languages", widget: "string"}
+        field: {label: "Language(s)", name: "stamps", widget: "string"}
       - {label: "Geographic Location", name: "location", widget: "text", required: false}
       - {label: "Facts", name: "facts", widget: "text", required: false}
       - {label: "History", name: "history", widget: "text", required: false}

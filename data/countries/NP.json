@@ -1,23 +1,23 @@
 {
-  "code": "NP",
+  "highest_point_m": 8848,
+  "facts": "Home to Mt. Everest.",
   "name": "Nepal",
   "flag": "https://flagcdn.com/w320/np.png",
-  "video_embed": "",
-  "images": [
-    "./images/placeholder.png"
-  ],
+  "code": "NP",
   "population": 30500000,
-  "area_km2": 147516,
-  "highest_point_m": 8848,
+  "stamps": [
+    "Himalayan series"
+  ],
   "currency": "Nepalese rupee (NPR)",
+  "history": "Unified in the 18th century; became a republic in 2008.",
+  "video_embed": "https://www.youtube.com/embed/LMD0nyNd3bM?si",
+  "location": "South Asia; between China and India",
   "animals": [
     "Snow leopard",
     "Red panda"
   ],
-  "stamps": [
-    "Himalayan series"
+  "images": [
+    "./images/placeholder.png"
   ],
-  "location": "South Asia; between China and India",
-  "facts": "Home to Mt. Everest.",
-  "history": "Unified in the 18th century; became a republic in 2008."
+  "area_km2": 147516
 }

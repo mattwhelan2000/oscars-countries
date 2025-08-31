@@ -1,0 +1,17 @@
+{
+  "code": "PH",
+  "name": "Philippines",
+  "flag": "https://flagcdn.com/ph.svg",
+  "video": "https://www.youtube.com/results?search_query=top+travel+places+Philippines",
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/3/3e/Philippine_tarsier_in_Bohol.jpg"
+  ],
+  "population": 113000000,
+  "area_km2": 300000,
+  "highest_point_m": 2954,
+  "currency": "Philippine peso (PHP)",
+  "animals": [
+    "Philippine tarsier"
+  ],
+  "facts": "Archipelago with over 7,000 islands; Mount Apo is highest peak."
+}

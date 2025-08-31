@@ -6,11 +6,12 @@
   "code": "Philippines",
   "population": 113000000,
   "currency": "Philippine peso (PHP)",
+  "video_embed": "https://youtu.be/embed/wD1w5WShII0",
   "animals": [
     "Philippine tarsier"
   ],
   "images": [
-    "uploads/img_0583.jpeg"
+    "https://ai-previews.123rf.com/ai-txt2img/600nwm/760863ec-38a5-4047-9d84-f2b632adaeff.jpg"
   ],
   "video": "https://www.youtube.com/results?search_query=top+travel+places+Philippines",
   "area_km2": 300000

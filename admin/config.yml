@@ -38,9 +38,9 @@ collections:
         widget: "list"
         field: {label: "Animal", name: "animal", widget: "string"}
       - label: "Stamps"
-        name: "stamps"
+        name: "Languages"
         widget: "list"
-        field: {label: "Stamp", name: "stamp", widget: "string"}
+        field: {label: "Stamp", name: "Languages", widget: "string"}
       - {label: "Geographic Location", name: "location", widget: "text", required: false}
       - {label: "Facts", name: "facts", widget: "text", required: false}
       - {label: "History", name: "history", widget: "text", required: false}

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,13 +11,19 @@
       <div class="container hero">
         <img data-bind="flag" src="./images/placeholder.png" alt="Flag">
         <div>
-          <h1><span data-bind="name">Country Name</span> <span class="badge" data-bind="code">XXX</span></h1>
+          <!-- small label (demoted) -->
+          <div class="small-label">Country Name</div>
+          <!-- BIG country name -->
+          <h1 class="country-name" data-bind="name">Country</h1>
+
           <div class="meta">
+            <span class="badge" data-bind="code">XXX</span>
             <a class="button" data-bind="back" href="./index.html">← All countries</a>
           </div>
         </div>
       </div>
     </header>
+
     <main class="container">
       <div class="section media">
         <div class="embed" data-bind="video"></div>
@@ -69,6 +74,7 @@
         </div>
       </div>
     </main>
+
     <div class="footer small">Edit <code>/data/countries.json</code> to update this page.</div>
     <script src="./assets/app.js"></script>
   </body>

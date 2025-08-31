@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="./assets/styles.css">
   </head>
   <body data-page="country">
-  <header>
-    <div class="container hero">
-      <img data-bind="flag" src="./images/placeholder.png" alt="Flag">
-      <div>
-        <!-- small label (demoted) -->
-        <div class="small-label">Country Name</div>
-        <!-- BIG country name, dynamically bound -->
-        <h1 class="country-name" data-bind="name">—</h1>
-  
-        <div class="meta">
-          <span class="badge" data-bind="code">XXX</span>
-          <a class="button" data-bind="back" href="./index.html">← All countries</a>
+    <header>
+      <div class="container hero">
+        <img data-bind="flag" src="./images/placeholder.png" alt="Flag">
+        <div>
+          <!-- small label (demoted) -->
+          <div class="small-label">Country Name</div>
+
+          <!-- BIG country name (keep the span for the existing data-bind logic) -->
+          <h1 class="country-name">
+            <span data-bind="name">Country</span>
+          </h1>
+
+          <div class="meta">
+            <span class="badge" data-bind="code">XXX</span>
+            <a class="button" data-bind="back" href="./index.html">← All countries</a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-
+    </header>
 
     <main class="container">
       <div class="section media">

@@ -64,14 +64,14 @@ input, select, textarea, button {
    Display styles for country labels/values (requested)
    ============================================================ */
 .country-name {
-  font-size: 2em;       /* big, prominent */
-  font-weight: bold;
+  font-size: 0.8em;       /* big, prominent */
+  color: #666;
   margin: 0.2em 0;
 }
 
 .small-label {
-  font-size: 0.8em;     /* smaller, secondary */
-  color: #666;
+  font-size: 2em;     /* smaller, secondary */
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

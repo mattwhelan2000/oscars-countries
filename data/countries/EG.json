@@ -3,7 +3,7 @@
   "facts": "Pyramids and Nile civilization; strategic Suez Canal.",
   "name": "Egypt",
   "flag": "https://flagcdn.com/w320/eg.png",
-  "code": "EG",
+  "code": "EGypt",
   "population": 111000000,
   "stamps": [
     "Pharaonic series"
@@ -17,7 +17,8 @@
     "Nile crocodile"
   ],
   "images": [
-    "uploads/img_0571.jpeg"
+    "uploads/img_0571.jpeg",
+    "https://inkart.net/wp-content/uploads/2024/11/Animals-of-Egypt-1534x2048.jpg"
   ],
   "area_km2": 1002450
 }

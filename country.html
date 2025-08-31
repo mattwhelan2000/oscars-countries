@@ -5,20 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-bind="name">Country</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <style>
+      /* helper to hide the extra binding target without removing it from the DOM */
+      .sr-only {
+        position: absolute !important;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0);
+        white-space: nowrap; border: 0;
+      }
+      .country-name { font-size: 2em; font-weight: 700; margin: .2em 0; }
+      .small-label { font-size: .8em; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
   </head>
   <body data-page="country">
     <header>
       <div class="container hero">
         <img data-bind="flag" src="./images/placeholder.png" alt="Flag">
         <div>
-          <!-- small label (demoted) -->
+          <!-- small label -->
           <div class="small-label">Country Name</div>
 
-          <!-- BIG country name (keep the span for the existing data-bind logic) -->
-          <h1 class="country-name">
-            <span data-bind="name">Name</span>
-          </h1>
+          <!-- BIG country title (we will set its textContent after bindings run) -->
+          <h1 class="country-name" id="countryTitle">Country</h1>
 
+          <!-- Keep your original binding targets so app.js continues to work -->
+          <span class="sr-only" id="boundName" data-bind="name">Country</span>
           <div class="meta">
             <span class="badge" data-bind="code">XXX</span>
             <a class="button" data-bind="back" href="./index.html">← All countries</a>
@@ -79,6 +91,39 @@
     </main>
 
     <div class="footer small">Edit <code>/data/countries.json</code> to update this page.</div>
+
+    <!-- Your existing binding logic -->
     <script src="./assets/app.js"></script>
+
+    <!-- Patch: promote the correct name into the big title after app.js runs -->
+    <script>
+      (function () {
+        function promoteTitle() {
+          var titleEl  = document.getElementById('countryTitle');
+          var nameEl   = document.getElementById('boundName');                // <span data-bind="name">
+          var codeEl   = document.querySelector('[data-bind="code"]');        // the pill (sometimes holds name)
+          var nameTxt  = nameEl ? nameEl.textContent.trim() : '';
+          var codeTxt  = codeEl ? codeEl.textContent.trim() : '';
+          // Prefer the explicit name binding if it has something real
+          if (nameTxt && nameTxt.toLowerCase() !== 'country') {
+            titleEl.textContent = nameTxt;
+            return;
+          }
+          // Fallback: if the "code" looks like a full name (longer than 3 chars), use it
+          if (codeTxt && codeTxt.length > 3) {
+            titleEl.textContent = codeTxt;
+            return;
+          }
+          // Otherwise leave whatever is there
+        }
+
+        // Run after DOM ready, and again on a tick in case app.js fills asynchronously
+        document.addEventListener('DOMContentLoaded', function () {
+          promoteTitle();
+          setTimeout(promoteTitle, 50);
+          setTimeout(promoteTitle, 150);
+        });
+      })();
+    </script>
   </body>
 </html>

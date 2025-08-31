@@ -1,3 +1,11 @@
+/* ============================================================
+   Admin customizations
+   - Hide the thin floating divider/Quick Add bubble
+   - Keep/dock the Control Bar (Contents / Media / etc.)
+   - Touch-friendly inputs
+   - Display tweaks for country name/value labels
+   ============================================================ */
+
 /* ===== Hide the thin floating divider/toolbar + "Quick add" bubble ===== */
 
 /* The “quick add” bubble - This will stay hidden, as requested */
@@ -10,7 +18,7 @@ button[title*="Quick add"],
 }
 
 /* The thin strip with the round handle (covers most Decap builds) */
-/* --- MODIFIED: I removed PaneControlBar and PaneControl from this list so they won't be hidden --- */
+/* --- MODIFIED: PaneControlBar and PaneControl were removed from this list so they won't be hidden --- */
 [role="separator"],
 div[class*="Resizer"],
 div[class*="PaneResizer"],
@@ -20,26 +28,22 @@ div[class*="DragHandle"] {
   display: none !important;
 }
 
-/* ===== NEW RULE: Dock the Control Bar (the one you were hiding) ===== */
-
-/* 
-  This new rule targets the bar that holds "Contents", "Media", etc.
-  Instead of hiding it, we are making it visible and forcing it to be
-  'static' (in the page flow) instead of 'absolute' (floating).
-*/
+/* ===== Dock the Control Bar (the strip with "Contents", "Media", etc.) ===== */
+/* Make it part of the normal flow so it doesn’t float over forms */
 div[class*="PaneControlBar"],
 div[class*="PaneControl"] {
-  display: flex !important;            /* Make it visible and layout items in a row */
-  position: static !important;        /* This is the key: Stops it from floating */
-  width: 100% !important;             /* Make it span the full width of its container */
-  box-shadow: none !important;        /* Remove floating shadows */
-  border-bottom: 2px solid #eaebed;  /* Add a clean divider line */
-  margin-bottom: 15px !important;    /* Add some space below the docked bar */
-  padding: 5px 10px !important;      /* Add some internal spacing */
-  background: #fff !important;        /* Ensure it has a solid background */
+  display: flex !important;          /* visible, laid out in a row */
+  position: static !important;       /* stop floating/absolute behavior */
+  width: 100% !important;            /* span container */
+  box-shadow: none !important;       /* remove floating shadow */
+  border-bottom: 2px solid #eaebed;  /* clean divider */
+  margin-bottom: 15px !important;    /* breathing room below */
+  padding: 5px 10px !important;      /* internal spacing */
+  background: #fff !important;       /* solid background */
   box-sizing: border-box !important;
+  align-items: center !important;
+  gap: 8px !important;
 }
-
 
 /* Keep editor layout tight after removing the strip */
 [class*="PaneContainer"],
@@ -52,4 +56,22 @@ div[class*="PaneControl"] {
 }
 
 /* Touch-friendly inputs (iPad) */
-input, select, textarea, button { font-size: 16px !important; }
+input, select, textarea, button {
+  font-size: 16px !important; /* avoid iOS zoom on focus */
+}
+
+/* ============================================================
+   Display styles for country labels/values (requested)
+   ============================================================ */
+.country-name {
+  font-size: 2em;       /* big, prominent */
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+
+.small-label {
+  font-size: 0.8em;     /* smaller, secondary */
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

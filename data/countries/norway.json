@@ -1,6 +1,13 @@
 {
+  "highest_point_m": 2469,
   "name": "NO",
+  "flag": "https://flagpedia.net/data/flags/w1160/no.webp",
   "code": "Norway",
+  "population": 56,
+  "currency": "Kroner",
   "video_embed": "https://www.youtube.com/embed/C5zORsjab5Q?si",
-  "flag": "https://flagpedia.net/data/flags/w1160/no.webp"
+  "languages": [
+    "norwegian"
+  ],
+  "area_km2": 323804
 }

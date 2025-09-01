@@ -6,6 +6,9 @@
   "population": 56,
   "currency": "Kroner",
   "video_embed": "https://www.youtube.com/embed/C5zORsjab5Q?si",
+  "images": [
+    "uploads/img_0592.jpeg"
+  ],
   "languages": [
     "norwegian"
   ],

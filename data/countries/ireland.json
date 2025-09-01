@@ -3,5 +3,8 @@
   "name": "Ireland",
   "flag": "https://flagpedia.net/data/flags/w1160/ie.webp",
   "video_embed": "https://www.youtube.com/embed/Hem4PTwgzMs?si",
-  "population": 5
+  "population": 5,
+  "area_km2": "",
+  "highest_point_m": "",
+  "currency": "Euro €"
 }

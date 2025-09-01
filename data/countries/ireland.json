@@ -1,14 +1,14 @@
 {
-  "highest_point_m": "",
+  "highest_point_m": 1038,
   "name": "Ireland",
   "flag": "https://flagpedia.net/data/flags/w1160/ie.webp",
   "code": "Ireland",
-  "population": 5,
+  "population": 5300000,
   "currency": "Euro €",
   "video_embed": "https://www.youtube.com/embed/Hem4PTwgzMs?si",
   "languages": [
     "Irish Gaelic",
     "English"
   ],
-  "area_km2": ""
+  "area_km2": 70274
 }

@@ -17,7 +17,8 @@
     "Hedgehog"
   ],
   "images": [
-    "./images/placeholder.png"
+    "./images/placeholder.png",
+    "uploads/img_0587.jpeg"
   ],
   "area_km2": 243610
 }

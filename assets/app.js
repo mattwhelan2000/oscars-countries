@@ -69,7 +69,18 @@ async function initCountry(){
   setText('[data-bind="animals"]', (item.animals||[]).join(', '));
   setText('[data-bind="currency"]', item.currency);
   setText('[data-bind="languages"]', (item.languages||[]).join(', '));
-  setText('[data-bind="location"]', item.location || '—');
+  const locEl = document.querySelector('[data-bind="location"]');
+  if (locEl) {
+    const query = (item.location || '').trim();
+    if (query) {
+      const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+      locEl.textContent = query;
+      locEl.href = url;
+    } else {
+      locEl.textContent = '—';
+      locEl.removeAttribute('href');
+    }
+  }
   setText('[data-bind="facts"]', item.facts || '—');
   setText('[data-bind="history"]', item.history || '—');
 

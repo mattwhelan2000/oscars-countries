@@ -3,5 +3,11 @@
   "flag": "https://flagpedia.net/data/flags/w1160/ir.webp",
   "name": "IR",
   "code": "Iran",
-  "location": "Iran,Aisa"
+  "location": "Iran,Aisa",
+  "languages": [
+    "Persian"
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/2/22/Languages_of_Iran.png"
+  ]
 }

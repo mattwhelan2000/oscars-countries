@@ -7,6 +7,9 @@
   "currency": "Iranian rial",
   "video_embed": "https://www.youtube.com/embed/LL6AIEZ-CN0?si",
   "location": "Iran,Aisa",
+  "animals": [
+    "Asiatic cheetah  Urial  Persian cat  Anatolian leopard  Persian fallow deer  Persian onager  Caracal  Onager  Marsh crocodile  Asian green bee-eater  Balochistan black bear  Pallas's cat  Bezoar ibex  Caspian seal  Neurergus kaiseri  Goitered gazelle  Central Asian cobra  Persian horned viper  Leopard gecko  Dwarf sperm whale  Garden warbler  Red-wattled lapwing  Eurasian treecreeper  Bonelli's eagle  Steppe eagle  Greek tortoise  Goliath heron  Oriental garden lizard  Eryx johnii  Corsac fox  Black-winged kite  Wild goat  Northern palm squirrel  Asian black bear  Caspian horse  Hamster  Eurasian eagle-owl  African houbara."
+  ],
   "images": [
     "https://upload.wikimedia.org/wikipedia/commons/2/22/Languages_of_Iran.png",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWyG6Qu6L5YLx0Np0T9kaJQny9ikJ91s0wAg&s",

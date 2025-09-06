@@ -1,10 +1,14 @@
 {
-  "code": "Barbados",
+  "highest_point_m": 336,
   "name": "BA",
   "flag": "https://flagpedia.net/data/flags/w1160/bb.webp",
-  "video_embed": "https://www.youtube.com/embed/tfRXdsX0sZ4?si",
+  "code": "Barbados",
   "population": 268000,
-  "area_km2": 430,
-  "highest_point_m": 336,
-  "currency": "Barbadian dollar [BBD]"
+  "currency": "Barbadian dollar [BBD]",
+  "video_embed": "https://www.youtube.com/embed/tfRXdsX0sZ4?si",
+  "languages": [
+    "English",
+    "Local bajan"
+  ],
+  "area_km2": 430
 }

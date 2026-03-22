@@ -1,5 +1,9 @@
 {
   "name": "Belgium",
   "flag": "https://flagpedia.net/data/flags/w1160/be.webp",
-  "code": "BE"
+  "code": "BE",
+  "currency": "Euro",
+  "languages": [
+    "English"
+  ]
 }

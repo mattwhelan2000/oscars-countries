@@ -5,5 +5,8 @@
   "currency": "Euro",
   "languages": [
     "English"
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/f/f4/Infantry_Memorial_-_Brussels%2C_Belgium_-_DSC07698.jpg"
   ]
 }

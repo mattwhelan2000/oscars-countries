@@ -1,13 +1,19 @@
 {
-  "code": "CR",
+  "highest_point_m": 3821,
   "name": "Costa Rica",
   "flag": "https://flagpedia.net/data/flags/w1160/cr.webp",
+  "code": "CR",
+  "population": 5420000,
+  "currency": "Colones",
+  "video_embed": "https://www.youtube.com/embed/bpEYKYzJNTg",
+  "animals": [
+    "Red footed booby ",
+    "Howler monkey ",
+    "Coati"
+  ],
   "images": [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyE22cmRKm68ZEXkfa3bCA2qr81ayOzGrY1ab3zdk-uo2d4b3kVXz8_Ic&s=10",
     "https://www.wildlifenomads.com/wp-content/uploads/2025/01/Animals-of-Costa-Rica-infographic-r.jpg",
     "https://i.imgur.com/EE5NNTL.jpeg"
-  ],
-  "population": 5420000,
-  "highest_point_m": 3821,
-  "video_embed": "https://www.youtube.com/embed/bpEYKYzJNTg"
+  ]
 }

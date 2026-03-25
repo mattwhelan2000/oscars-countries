@@ -1,10 +1,12 @@
 {
   "highest_point_m": 2764,
+  "facts": "Albania, located on the Balkan Peninsula with a population of ~2.77 million, is known for its stunning Ionian/Adriatic beaches, mountainous terrain, and unique, ancient language. It boasts a rich history of Roman and Ottoman influence, a unique \"Besa\" honor code, and a communist past that left over 700,000 bunkers. The official language is Albanian, and the currency is the lek (ALL). ",
   "name": "Albania",
   "flag": "https://flagpedia.net/data/flags/w1160/al.webp",
   "code": "AL",
   "population": 2780000,
   "currency": "Lek",
+  "history": "Albania has a long, complex history, evolving from ancient Illyrian tribes into a strategic Roman and Byzantine territory. After centuries of Ottoman rule (1385–1912) and a national resistance led by Skanderbeg, Albania achieved independence in 1912. Following World War II, it became a strict communist state under Enver Hoxha, enduring extreme international isolation until 1990, after which it transitioned to a democratic, NATO-member nation. ",
   "video_embed": "https://www.youtube.com/embed/4B0SHtJ_Bfw",
   "location": "8GH25539+88",
   "animals": [

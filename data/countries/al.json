@@ -6,9 +6,20 @@
   "population": 2780000,
   "currency": "Lek",
   "video_embed": "https://www.youtube.com/embed/4B0SHtJ_Bfw",
+  "location": "8GH25539+88",
+  "animals": [
+    "Wolf",
+    "Fox",
+    "Golden eagle"
+  ],
   "images": [
     "https://www.animalspot.net/wp-content/uploads/2023/08/Birds-of-Albania.jpg",
     "https://balkaninsight.com/wp-content/uploads/2018/08/tirana-skanderbeg-square-wikimedia-commons-640.jpg"
+  ],
+  "languages": [
+    "Albanian",
+    "Swiss",
+    "French"
   ],
   "area_km2": 28748
 }

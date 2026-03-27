@@ -2,5 +2,8 @@
   "name": "Panama",
   "code": "PA",
   "flag": "https://flagpedia.net/data/flags/w1160/pa.webp",
-  "video_embed": "https://www.youtube.com/embed/xMV3crRTJD4"
+  "video_embed": "https://www.youtube.com/embed/xMV3crRTJD4",
+  "images": [
+    "https://mediacdn.nhbs.com/jackets/jackets_resizer_xlarge/17/178591_1.jpg"
+  ]
 }

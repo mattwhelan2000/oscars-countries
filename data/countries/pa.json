@@ -1,19 +1,20 @@
 {
   "name": "Panama",
-  "code": "PA",
   "flag": "https://flagpedia.net/data/flags/w1160/pa.webp",
+  "code": "PA",
+  "currency": "US dollar/Panamanian dollar",
   "video_embed": "https://www.youtube.com/embed/xMV3crRTJD4",
-  "images": [
-    "https://mediacdn.nhbs.com/jackets/jackets_resizer_xlarge/17/178591_1.jpg",
-    "https://landmarksarchitects.com/wp-content/uploads/2024/10/Panama-landmarks-Biomuseo-farnk-1072024.jpg"
-  ],
+  "location": "(8.5379810, -80.7821270)",
   "animals": [
     "Howler monkey",
     "Sloth",
     "Anteater"
   ],
+  "images": [
+    "https://mediacdn.nhbs.com/jackets/jackets_resizer_xlarge/17/178591_1.jpg",
+    "https://landmarksarchitects.com/wp-content/uploads/2024/10/Panama-landmarks-Biomuseo-farnk-1072024.jpg"
+  ],
   "languages": [
     "Panamanian Spanish"
-  ],
-  "location": "(8.5379810, -80.7821270)"
+  ]
 }

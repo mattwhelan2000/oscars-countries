@@ -1,10 +1,12 @@
 {
   "highest_point_m": 3475,
+  "facts": "Panama is a Central American nation bridging two continents, renowned for the 51-mile Panama Canal connecting the Atlantic and Pacific oceans. With a high-income economy based on commerce and tourism, it features Spanish as the official language, uses the U.S. dollar, and has a, largely, sunny climate. ",
   "name": "Panama",
   "flag": "https://flagpedia.net/data/flags/w1160/pa.webp",
   "code": "PA",
   "population": 4625718,
   "currency": "US dollar/Panamanian dollar",
+  "history": "Panama’s history is defined by its strategic location as a transit point, transitioning from indigenous inhabitation to a Spanish colonial treasure route, then to a part of Colombia before gaining independence in 1903 with US support to build the Panama Canal. Completed in 1914, the canal reshaped global trade, with full control passing to Panama in 1999. ",
   "video_embed": "https://www.youtube.com/embed/xMV3crRTJD4",
   "location": "(8.5379810, -80.7821270)",
   "animals": [
